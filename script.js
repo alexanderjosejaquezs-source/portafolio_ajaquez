@@ -214,6 +214,7 @@ function inicializarGaleria() {
                         }
 
                         contenedor.insertBefore(imagenElemento, input);
+                        contenedor.classList.add('has-image');
                     } else {
                         galeria.appendChild(imagenElemento);
                     }
