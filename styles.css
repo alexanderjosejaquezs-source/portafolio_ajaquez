@@ -286,6 +286,10 @@ p {
     position: relative;
     overflow: hidden;
     animation: fadeIn 1s ease-out;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    font: inherit;
 }
 
 .menu-item::before {
@@ -313,6 +317,11 @@ p {
 .menu-item:hover .menu-icono {
     transform: scale(1.2);
     color: var(--secondary);
+}
+
+.menu-item:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
 }
 
 .menu-icono {
