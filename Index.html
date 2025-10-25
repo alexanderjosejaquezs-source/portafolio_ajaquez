@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital - Dinamizador TIC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Efecto de partículas -->
+    <div class="particulas" id="particulas"></div>
+    
+    <!-- Modal para galería de imágenes -->
+    <div id="modal-galeria" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <div class="modal-imagen-container">
+                <img id="imagen-ampliada" src="" alt="Imagen ampliada">
+            </div>
+            <div class="modal-info">
+                <h3 id="titulo-imagen"></h3>
+                <p id="descripcion-imagen"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Portada -->
+        <section id="portada" class="pagina activa">
+            <div class="logos">
+                <div class="logo-placeholder">
+                    <img src="Recursos/Logos/Logo-minerd.png" alt="Logo MINERD" class="logo-img">
+                </div>
+                <div class="logo-placeholder">
+                    <img src="Recursos/Logos/Logo-liceo.jpg" alt="Liceo Germán Martínez Tavárez" class="logo-img">
+                </div>
+            </div>
+            
+            <div class="portada-content">
+                <div class="portada-img">
+                    <img src="Recursos/fotografias/foto-portada.PNG" alt="Retrato de Alexander Jáquez " class="portada-img" style="display:block;margin:0 auto;max-width:100%;height:auto;">
+                </div>
+                <h1>PORTAFOLIO DIGITAL DE EVIDENCIAS</h1>
+                <h2>Dinamizador TIC</h2>
+                <p><strong>Nombre completo:</strong> Alexander Jáquez</p>
+                <p><strong>Cargo:</strong> Dinamizador TIC</p>
+                <p><strong>Centro educativo:</strong> Liceo Prof. Germán Martínez Tavárez</p>
+                <p><strong>Regional:</strong> 15</p>
+                <p><strong>Distrito educativo:</strong> 15-04</p>
+                <p><strong>Año escolar:</strong> 2025-2026</p>
+                
+                <div class="action-buttons">
+                    <button class="btn" onclick="mostrarPagina('menu')">
+                        <i class="fas fa-play"></i> Iniciar Portafolio
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Menú de Navegación -->
+        <section id="menu" class="pagina">
+            <div class="seccion">
+                <div class="seccion-header">
+                    <div class="seccion-icono">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <h2>Menú de Navegación</h2>
+                </div>
+                
+                <p>Selecciona una sección para ver los detalles de mi trabajo como Dinamizador TIC durante el año escolar 2025-2026.</p>
+                
+                <div class="menu-navegacion">
+                    <a href="#" class="menu-item" onclick="mostrarPagina('presentacion')">
+                        <div class="menu-icono">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="menu-titulo">Presentación Personal</div>
+                        <div class="menu-descripcion">Mi perfil, formación y experiencia</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('funciones')">
+                        <div class="menu-icono">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="menu-titulo">Funciones del Dinamizador TIC</div>
+                        <div class="menu-descripcion">Roles y responsabilidades</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('planificacion')">
+                        <div class="menu-icono">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="menu-titulo">Planificación y Gestión TIC</div>
+                        <div class="menu-descripcion">Cronogramas y proyectos</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('capacitacion')">
+                        <div class="menu-icono">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="menu-titulo">Capacitación Docente</div>
+                        <div class="menu-descripcion">Talleres y asesorías</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('innovacion')">
+                        <div class="menu-icono">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="menu-titulo">Innovación Pedagógica</div>
+                        <div class="menu-descripcion">Proyectos y recursos digitales</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('apoyo')">
+                        <div class="menu-icono">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="menu-titulo">Apoyo a Estudiantes</div>
+                        <div class="menu-descripcion">Talleres estudiantiles</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('gestion')">
+                        <div class="menu-icono">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="menu-titulo">Gestión Técnica</div>
+                        <div class="menu-descripcion">Mantenimiento y soporte</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('comunicacion')">
+                        <div class="menu-icono">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="menu-titulo">Comunicación Institucional</div>
+                        <div class="menu-descripcion">Vinculación y colaboración</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('desarrollo')">
+                        <div class="menu-icono">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="menu-titulo">Desarrollo Profesional</div>
+                        <div class="menu-descripcion">Certificados y actualización</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('autoevaluacion')">
+                        <div class="menu-icono">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="menu-titulo">Autoevaluación</div>
+                        <div class="menu-descripcion">Logros y áreas de mejora</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('talleres')">
+                        <div class="menu-icono">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="menu-titulo">Evidencias de Talleres</div>
+                        <div class="menu-descripcion">Fotografías y materiales</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('recursos')">
+                        <div class="menu-icono">
+                            <i class="fas fa-file-download"></i>
+                        </div>
+                        <div class="menu-titulo">Recursos Digitales</div>
+                        <div class="menu-descripcion">Materiales creados</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('impacto')">
+                        <div class="menu-icono">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="menu-titulo">Impacto de la Labor</div>
+                        <div class="menu-descripcion">Estadísticas y testimonios</div>
+                    </a>
+                    
+                    <a href="#" class="menu-item" onclick="mostrarPagina('conclusiones')">
+                        <div class="menu-icono">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                        <div class="menu-titulo">Conclusiones</div>
+                        <div class="menu-descripcion">Reflexiones y proyecciones</div>
+                    </a>
+                </div>
+                
+                <div class="navegacion">
+                    <button class="btn btn-volver" onclick="mostrarPagina('portada')">
+                        <i class="fas fa-arrow-left"></i> Volver a Portada
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Presentación Personal -->
+        <section id="presentacion" class="pagina">
+            <div class="seccion">
+                <div class="seccion-header">
+                    <div class="seccion-icono">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2>Presentación Personal</h2>
+                </div>
+                
+                <h3>Mi Perfil Profesional: El Dinamizador TIC con Visión de Futuro</h3>
+                <p>Mi transición al rol de Dinamizador TIC en la educación pública, después de años de experiencia en el mundo de la informática, me otorga un conjunto de habilidades único y muy relevante para este momento de transformación digital en la República Dominicana.</p>
+                
+                <div class="fortalezas-container">
+                    <div class="fortalezas-card">
+                        <h3><i class="fas fa-rocket"></i> Mis Fortalezas Clave</h3>
+                        <ul>
+                            <li><strong>Dominio Técnico de Vanguardia:</strong> Mi experiencia previa me permite estar siempre a la vanguardia. No solo sé usar las herramientas, sino que entiendo su arquitectura, lo que me permite seleccionar las <strong>soluciones de software y hardware más robustas y modernas</strong> para el centro.</li>
+                            <li><strong>Capacidad de Resolución Rápida:</strong> Estoy capacitado para <strong>diagnosticar y solucionar problemas técnicos de forma lógica y expedita</strong>, minimizando el tiempo que los equipos están inactivos.</li>
+                            <li><strong>Acompañamiento Pedagógico Centrado en la Lógica:</strong> Mi experiencia me permite enseñar a los estudiantes y docentes a desarrollar el <strong>pensamiento computacional</strong>, habilidades fundamentales para la resolución de problemas en cualquier área curricular.</li>
+                            <li><strong>Conexión y Paciencia con el Estudiante:</strong> Me enorgullece mi capacidad para conectar con mis estudiantes y mantener una <strong>paciencia pedagógica</strong> genuina, asegurando que el aprendizaje se consolide de la mejor manera posible.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mejoras-card">
+                        <h3><i class="fas fa-seedling"></i> Áreas de Crecimiento</h3>
+                        <ul>
+                            <li><strong>El Equilibrio entre el Detalle Técnico y el Objetivo Pedagógico:</strong> Mi desafío es asegurar que no me centre demasiado en los detalles de la herramienta, sino en cómo esta <strong>mejora el proceso de aprendizaje del estudiante</strong>.</li>
+                            <li><strong>Adaptación a la Velocidad Burocrática:</strong> Estoy optimizando mis procesos de documentación para cumplir con rigor la burocracia sin que esto me consuma el tiempo de acompañamiento directo.</li>
+                            <li><strong>Gestión de la Sobrecarga de Tareas Técnicas:</strong> Estoy diseñando <strong>protocolos de auto-servicio y capacitación básica</strong> para los usuarios, asegurando que mi tiempo se enfoque primordialmente en el <strong>acompañamiento pedagógico</strong>.</li>
+                            <li><strong>Diseño con Limitaciones de Infraestructura:</strong> Mi área de crecimiento es seguir desarrollando proyectos <strong>de alto impacto pedagógico</strong> que sean efectivos, incluso en escenarios de baja conectividad o con equipos limitados.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Formación Académica</h3>
+                <ul>
+                    <li>[Título universitario, institución, año]</li>
+                    <li>[Diplomados o especializaciones relacionadas con TIC]</li>
+                    <li>[Cursos de actualización en tecnología educativa]</li>
+                </ul>
+                
+                <h3>Experiencia en Integración de TIC</h3>
+                <p>[Descripción de experiencia previa en integración de tecnologías en entornos educativos]</p>
+
+                <div class="galeria-container">
+                <h3>Galería de Evidencias</h3>
+                <div class="galeria-fija" id="galeria-presentacion">
+                    <div class="espacio-imagen" data-index="0">
+                        <div class="placeholder-imagen">
+                            <i class="fas fa-plus"></i>
+                            <span>Agregar imagen 1</span>
+                        </div>
+                        <input type="file" class="input-imagen" accept="image/*">
+                    </div>
+                    <div class="espacio-imagen" data-index="1">
+                        <div class="placeholder-imagen">
+                           <img src="Recursos/fotografias/foto-portada.PNG" alt="Foto de Alexander Jáquez" 
+                           class="placeholder-imagen" style="display:block;margin:0 auto;max-width:100%; max-height:100%;">
+                            <span>Evidencia 2</span>
+                        </div>
+                        <input type="file" class="input-imagen" accept="image/*">
+                    </div>
+                    <div class="espacio-imagen" data-index="2">
+                        <div class="placeholder-imagen">
+                            <i class="fas fa-plus"></i>
+                            <span>Agregar imagen 3</span>
+                        </div>
+                        <input type="file" class="input-imagen" accept="image/*">
+                    </div>
+                    <div class="espacio-imagen" data-index="3">
+                        <div class="placeholder-imagen">
+                            <i class="fas fa-plus"></i>
+                            <span>Agregar imagen 4</span>
+                        </div>
+                        <input type="file" class="input-imagen" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="galeria-container">
+                    <h3>Galería de Evidencias</h3>
+                    <div class="galeria-grid" id="galeria-presentacion">
+                        ***Las imágenes se agregarán dinámicamente
+                    </div>
+                    <div class="agregar-imagen">
+                        <input type="file" id="agregar-imagen-presentacion" accept="image/*" multiple>
+                        <label for="agregar-imagen-presentacion" class="btn btn-small">
+                            <i class="fas fa-plus"></i> Agregar Imágenes
+                        </label>
+                    </div>
+                </div>-->
+                
+                <div class="navegacion">
+                    <button class="btn btn-volver" onclick="mostrarPagina('menu')">
+                        <i class="fas fa-arrow-left"></i> Volver al Menú
+                    </button>
+                    <button class="btn" onclick="mostrarPagina('funciones')">
+                        Siguiente: Funciones <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Funciones del Dinamizador TIC -->
+        <section id="funciones" class="pagina">
+            <div class="seccion">
+                <div class="seccion-header">
+                    <div class="seccion-icono">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h2>Funciones del Dinamizador TIC</h2>
+                </div>
+                
+                <div class="evidencias-grid">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="evidencia-icono">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3>Soporte Técnico</h3>
+                                <p>Haz clic para ver detalles</p>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Soporte Técnico</h3>
+                                <p>Asistencia en el mantenimiento y solución de problemas de equipos tecnológicos.</p>
+                                <ul>
+                                    <li>Diagnóstico y reparación de equipos</li>
+                                    <li>Instalación de software educativo</li>
+                                    <li>Configuración de redes y conectividad</li>
+                                    <li>Mantenimiento preventivo y correctivo</li>
+                                </ul>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="evidencia-icono">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <h3>Capacitación Docente</h3>
+                                <p>Haz clic para ver detalles</p>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Capacitación Docente</h3>
+                                <p>Formación del personal docente en el uso pedagógico de herramientas digitales.</p>
+                                <ul>
+                                    <li>Talleres de herramientas TIC</li>
+                                    <li>Asesoría en diseño de materiales digitales</li>
+                                    <li>Capacitación en plataformas educativas</li>
+                                    <li>Seguimiento y evaluación de competencias digitales</li>
+                                </ul>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="evidencia-icono">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3>Gestión de Plataformas</h3>
+                                <p>Haz clic para ver detalles</p>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Gestión de Plataformas</h3>
+                                <p>Administración de plataformas educativas y recursos digitales institucionales.</p>
+                                <ul>
+                                    <li>Gestión de usuarios y permisos</li>
+                                    <li>Configuración de cursos virtuales</li>
+                                    <li>Monitoreo de uso y estadísticas</li>
+                                    <li>Integración con sistemas existentes</li>
+                                </ul>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="evidencia-icono">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <h3>Acompañamiento Pedagógico</h3>
+                                <p>Haz clic para ver detalles</p>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Acompañamiento Pedagógico</h3>
+                                <p>Seguimiento y apoyo a docentes en la implementación de TIC en el aula.</p>
+                                <ul>
+                                    <li>Asesoría en diseño de actividades con TIC</li>
+                                    <li>Acompañamiento en aula</li>
+                                    <li>Retroalimentación sobre integración tecnológica</li>
+                                    <li>Elaboración de planes de mejora</li>
+                                </ul>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="evidencia-icono">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <h3>Talleres a Estudiantes</h3>
+                                <p>Haz clic para ver detalles</p>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Talleres a Estudiantes</h3>
+                                <p>Formación directa a estudiantes en competencias digitales y herramientas tecnológicas específicas.</p>
+                                <ul>
+                                    <li>Taller de competencias digitales básicas</li>
+                                    <li>Formación en herramientas ofimáticas</li>
+                                    <li>Programación y robótica educativa</li>
+                                    <li>Seguridad digital y ciudadanía responsable</li>
+                                </ul>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="evidencia-icono">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h3>Gestión de Proyectos</h3>
+                                <p>Haz clic para ver detalles</p>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Gestión de Proyectos</h3>
+                                <p>Coordinación e implementación de proyectos tecnológicos institucionales.</p>
+                                <ul>
+                                    <li>Planificación y ejecución de proyectos TIC</li>
+                                    <li>Gestión de recursos y presupuestos</li>
+                                    <li>Coordinación con equipos multidisciplinarios</li>
+                                    <li>Evaluación de impacto y resultados</li>
+                                </ul>
+                                <div class="flip-hint">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="galeria-container">
+                    <h3>Galería de Evidencias</h3>
+                    <div class="galeria-grid" id="galeria-funciones">
+                        <!-- Las imágenes se agregarán dinámicamente -->
+                    </div>
+                    <div class="agregar-imagen">
+                        <input type="file" id="agregar-imagen-funciones" accept="image/*" multiple>
+                        <label for="agregar-imagen-funciones" class="btn btn-small">
+                            <i class="fas fa-plus"></i> Agregar Imágenes
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="navegacion">
+                    <button class="btn btn-volver" onclick="mostrarPagina('presentacion')">
+                        <i class="fas fa-arrow-left"></i> Anterior: Presentación
+                    </button>
+                    <button class="btn" onclick="mostrarPagina('planificacion')">
+                        Siguiente: Planificación <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Planificación y Gestión TIC -->
+        <section id="planificacion" class="pagina">
+            <div class="seccion">
+                <div class="seccion-header">
+                    <div class="seccion-icono">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h2>Planificación y Gestión TIC</h2>
+                </div>
+                
+                <h3>Plan Anual de Integración de TIC</h3>
+                <p>[Descripción del plan anual con objetivos, estrategias y metas]</p>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-file-pdf"></i> Plan Anual TIC 2025-2026</h4>
+                    <p>Documento completo del plan anual de integración de tecnologías</p>
+                    <input type="file" class="file-input" accept=".pdf,.doc,.docx">
+                </div>
+                
+                <h3>Cronograma de Actividades</h3>
+                <div class="table-container">
+                    <table id="cronograma-table">
+                        <thead>
+                            <tr>
+                                <th>Actividad</th>
+                                <th>Fecha</th>
+                                <th>Participantes</th>
+                                <th>Responsable</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cronograma-body">
+                            <tr>
+                                <td>Taller de Plataforma Educativa</td>
+                                <td>Septiembre 2025</td>
+                                <td>Docentes</td>
+                                <td>Alexander Jáquez</td>
+                                <td><span class="estado completado">Completado</span></td>
+                                <td>
+                                    <button class="btn-small edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-small delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Asesoría uso de Genially</td>
+                                <td>Octubre 2025</td>
+                                <td>Docentes de Ciencias</td>
+                                <td>Alexander Jáquez</td>
+                                <td><span class="estado completado">Completado</span></td>
+                                <td>
+                                    <button class="btn-small edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-small delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Taller de Competencias Digitales</td>
+                                <td>Noviembre 2025</td>
+                                <td>Estudiantes de Primer Año</td>
+                                <td>Alexander Jáquez</td>
+                                <td><span class="estado proceso">En proceso</span></td>
+                                <td>
+                                    <button class="btn-small edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-small delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Taller de Excel - Matemática Financiera</td>
+                                <td>Febrero 2026</td>
+                                <td>Estudiantes de 4to Secundaria</td>
+                                <td>Alexander Jáquez</td>
+                                <td><span class="estado planificado">Planificado</span></td>
+                                <td>
+                                    <button class="btn-small edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-small delete-btn"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form-agregar-actividad">
+                    <h4>Agregar Nueva Actividad</h4>
+                    <div class="form-grid">
+                        <input type="text" id="nueva-actividad" placeholder="Nombre de la actividad">
+                        <input type="text" id="nueva-fecha" placeholder="Fecha (ej: Marzo 2026)">
+                        <input type="text" id="nueva-participantes" placeholder="Participantes">
+                        <select id="nueva-estado">
+                            <option value="planificado">Planificado</option>
+                            <option value="proceso">En proceso</option>
+                            <option value="completado">Completado</option>
+                        </select>
+                        <button id="agregar-actividad" class="btn-small"><i class="fas fa-plus"></i> Agregar</button>
+                    </div>
+                </div>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-file-excel"></i> Cronograma Detallado de Actividades TIC</h4>
+                    <p>Documento con el desglose mensual de todas las actividades planificadas</p>
+                    <input type="file" class="file-input" accept=".xlsx,.xls,.csv">
+                </div>
+                
+                <h3>Registros de Mantenimiento</h3>
+                <p>[Descripción de los registros de mantenimiento y actualización de equipos]</p>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-clipboard-list"></i> Bitácora de Mantenimiento Técnico</h4>
+                    <p>Registro detallado de mantenimientos preventivos y correctivos realizados</p>
+                    <input type="file" class="file-input" accept=".pdf,.doc,.docx,.xlsx">
+                </div>
+                
+                <div class="evidencia-visual" data-section="planificacion">
+                    <i class="fas fa-images"></i>
+                    <p>Espacio para evidencias fotográficas de equipos en mantenimiento o proyectos implementados</p>
+                    <input type="file" class="file-input" accept="image/*" multiple>
+                </div>
+                <div class="navegacion">
+                    <button class="btn btn-volver" onclick="mostrarPagina('funciones')">
+                        <i class="fas fa-arrow-left"></i> Anterior: funciones
+                    </button>
+                    <button class="btn" onclick="mostrarPagina('capacitacion')">
+                        Siguiente: capacitacion <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            </section>
+        
+        <!-- Capacitación y Acompañamiento Docente -->
+        <section id="capacitacion" class="pagina">
+            <div class="seccion">
+                <div class="seccion-header">
+                    <div class="seccion-icono">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2>Capacitación y Acompañamiento Docente</h2>
+                </div>
+                
+                <h3>Actas de Talleres y Capacitaciones</h3>
+                <p>[Resumen de talleres realizados con fechas, temas y participantes]</p>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-file-alt"></i> Acta Taller Plataformas Educativas - Sept 2025</h4>
+                    <p>Documento oficial con lista de asistencia y temas tratados</p>
+                    <input type="file" class="file-input" accept=".pdf,.doc,.docx">
+                </div>
+                
+                <h3>Encuestas de Satisfacción Docente</h3>
+                <div class="grafico-container">
+                    <canvas id="encuesta-chart" width="400" height="200"></canvas>
+                </div>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-chart-bar"></i> Resultados Encuesta Satisfacción Docente</h4>
+                    <p>Análisis detallado de los resultados de las encuestas aplicadas a docentes</p>
+                    <input type="file" class="file-input" accept=".pdf,.xlsx,.xls">
+                </div>
+                
+                <h3>Reportes de Asesorías</h3>
+                <p>[Descripción de asesorías individuales y grupales realizadas]</p>
+                
+                <div class="evidencia-visual" data-section="capacitacion">
+                    <i class="fas fa-images"></i>
+                    <p>Espacio para evidencias fotográficas de capacitaciones y asesorías</p>
+                    <input type="file" class="file-input" accept="image/*" multiple>
+                </div>
+            </div>
+        </section>
+            
+            <!-- Desarrollo Profesional -->
+            <section id="desarrollo" class="pagina">
+                <div class="seccion">
+                    <div class="seccion-header">
+                        <div class="seccion-icono">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h2>Desarrollo Profesional</h2>
+                    </div>
+                    
+                    <h3>Certificados de Cursos y Diplomados</h3>
+                    <div class="evidencias-grid" id="certificados-container">
+                        <!-- Los certificados se agregarán dinámicamente -->
+                    </div>
+                    
+                    <div class="form-agregar-certificado">
+                        <h4>Agregar Certificado</h4>
+                        <div class="form-grid">
+                            <input type="text" id="nombre-curso" placeholder="Nombre del curso">
+                            <input type="text" id="institucion-curso" placeholder="Institución">
+                            <input type="text" id="fecha-curso" placeholder="Fecha (ej: 2025)">
+                            <input type="file" id="archivo-certificado" accept=".pdf,.jpg,.jpeg,.png">
+                            <button id="agregar-certificado" class="btn-small"><i class="fas fa-plus"></i> Agregar</button>
+                        </div>
+                    </div>
+                    
+                    <h3>Participación en Comunidades de Aprendizaje TIC</h3>
+                    <p>[Descripción de participación en redes profesionales y comunidades de práctica]</p>
+                    
+                    <div class="evidencia-visual" data-section="desarrollo">
+                        <i class="fas fa-images"></i>
+                        <p>Espacio para certificados o evidencias de participación en eventos de desarrollo profesional</p>
+                        <input type="file" class="file-input" accept="image/*" multiple>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Autoevaluación y Reflexión Profesional -->
+            <section id="autoevaluacion" class="pagina">
+                <div class="seccion-header">
+                    <div class="seccion-icono">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2>Autoevaluación y Reflexión Profesional</h2>
+                </div>
+                
+                <h3>Logros Principales</h3>
+                <ul id="logros-list">
+                    <li>Implementación exitosa del taller de competencias digitales para primer año</li>
+                    <li>Capacitación del 85% del cuerpo docente en plataformas educativas</li>
+                    <li>Desarrollo del taller de Excel para matemática financiera con alta participación estudiantil</li>
+                </ul>
+                
+                <div class="form-agregar-logro">
+                    <input type="text" id="nuevo-logro" placeholder="Agregar nuevo logro">
+                    <button id="agregar-logro" class="btn-small"><i class="fas fa-plus"></i></button>
+                </div>
+                
+                <h3>Retos Identificados</h3>
+                <ul id="retos-list">
+                    <li>Falta de equipos tecnológicos suficientes para todos los estudiantes</li>
+                    <li>Resistencia al cambio de algunos docentes en la integración de TIC</li>
+                    <li>Limitaciones de conectividad en algunas áreas del centro educativo</li>
+                </ul>
+                
+                <div class="form-agregar-reto">
+                    <input type="text" id="nuevo-reto" placeholder="Agregar nuevo reto">
+                    <button id="agregar-reto" class="btn-small"><i class="fas fa-plus"></i></button>
+                </div>
+                
+                <h3>Propuestas de Mejora</h3>
+                <p>[Descripción de propuestas para mejorar la integración TIC en el centro educativo]</p>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-file-alt"></i> Informe de Autoevaluación Anual</h4>
+                    <p>Documento completo con el análisis detallado del desempeño profesional</p>
+                    <input type="file" class="file-input" accept=".pdf,.doc,.docx">
+                </div>
+            </section>
+            
+            <!-- Evidencias de Talleres -->
+            <section id="talleres" class="pagina">
+                <div class="seccion-header">
+                    <div class="seccion-icono">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h2>Evidencias de Talleres</h2>
+                </div>
+                
+                <h3>Taller de Competencias Digitales - Primer Año</h3>
+                <p>Fotografías, listas de asistencia y materiales utilizados en el taller de competencias digitales para estudiantes de primer año.</p>
+                
+                <div class="evidencia-visual" data-section="talleres-competencias">
+                    <i class="fas fa-images"></i>
+                    <p>Espacio para fotografías del taller de competencias digitales</p>
+                    <input type="file" class="file-input" accept="image/*" multiple>
+                </div>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-file-alt"></i> Lista de Asistencia - Taller Competencias Digitales</h4>
+                    <p>Registro oficial de participantes en el taller</p>
+                    <input type="file" class="file-input" accept=".pdf,.xlsx,.xls">
+                </div>
+                
+                <h3>Taller de Excel - Matemática Financiera</h3>
+                <p>Evidencias del taller especializado para estudiantes de 4to de secundaria sobre el uso de Excel en matemática financiera.</p>
+                
+                <div class="evidencia-visual" data-section="talleres-excel">
+                    <i class="fas fa-images"></i>
+                    <p>Espacio para fotografías del taller de Excel</p>
+                    <input type="file" class="file-input" accept="image/*" multiple>
+                </div>
+                
+                <div class="documento-placeholder">
+                    <h4><i class="fas fa-file-alt"></i> Material Didáctico - Taller Excel</h4>
+                    <p>Guías y ejercicios utilizados en el taller de Excel para matemática financiera</p>
+                    <input type="file" class="file-input" accept=".pdf,.doc,.docx">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recursos Digitales Creados -->
+        <section id="recursos" class="pagina">
+            <div class="seccion-header">
+                <div class="seccion-icono">
+                    <i class="fas fa-file-download"></i>
+                </div>
+                <h2>Recursos Digitales Creados</h2>
+            </div>
+            
+            <h3>Materiales para Talleres Estudiantiles</h3>
+            <ul>
+                <li>Guía de competencias digitales básicas</li>
+                <li>Tutorial de Excel para matemática financiera</li>
+                <li>Presentaciones interactivas de los talleres</li>
+                <li>Ejercicios prácticos para estudiantes</li>
+            </ul>
+            
+            <h3>Enlaces a Recursos</h3>
+            <div id="enlaces-container">
+                <!-- Los enlaces se agregarán dinámicamente -->
+            </div>
+            
+            <div class="form-agregar-enlace">
+                <h4>Agregar Enlace a Recurso</h4>
+                <div class="form-grid">
+                    <input type="text" id="titulo-enlace" placeholder="Título del recurso">
+                    <input type="url" id="url-enlace" placeholder="URL del recurso">
+                    <button id="agregar-enlace" class="btn-small"><i class="fas fa-plus"></i> Agregar</button>
+                </div>
+            </div>
+            
+            <div class="evidencia-visual" data-section="recursos">
+                <i class="fas fa-laptop"></i>
+                <p>Espacio para capturas de pantalla de recursos digitales creados</p>
+                <input type="file" class="file-input" accept="image/*" multiple>
+            </div>
+        </section>
+        
+        <!-- Impacto de la Labor -->
+        <section id="impacto" class="pagina">
+            <div class="seccion-header">
+                <div class="seccion-icono">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h2>Impacto de la Labor</h2>
+            </div>
+            
+            <h3>Estadísticas de Participación</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Participantes</th>
+                            <th>Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Talleres de capacitación docente</td>
+                            <td>45 docentes</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td>Asesorías individuales</td>
+                            <td>32 docentes</td>
+                            <td>60%</td>
+                        </tr>
+                        <tr>
+                            <td>Taller competencias digitales (1er año)</td>
+                            <td>120 estudiantes</td>
+                            <td>95%</td>
+                        </tr>
+                        <tr>
+                            <td>Taller Excel matemática financiera (4to)</td>
+                            <td>65 estudiantes</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>Proyectos con TIC</td>
+                            <td>18 aulas</td>
+                            <td>75%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Testimonios</h3>
+            <div class="evidencias-grid" id="testimonios-container">
+                <div class="evidencia-card">
+                    <p>"El taller de competencias digitales fue fundamental para que nuestros estudiantes de primer año se familiaricen con las herramientas tecnológicas que usarán durante toda su vida académica."</p>
+                    <p><strong>- [Nombre del docente]</strong></p>
+                    <button class="btn-small delete-testimonio"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="evidencia-card">
+                    <p>"Gracias al taller de Excel, pude aplicar directamente los conocimientos en mis proyectos de matemática financiera y mejorar significativamente mis resultados."</p>
+                    <p><strong>- [Nombre del estudiante]</strong></p>
+                    <button class="btn-small delete-testimonio"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            
+            <div class="form-agregar-testimonio">
+                <h4>Agregar Testimonio</h4>
+                <div class="form-grid">
+                    <textarea id="texto-testimonio" placeholder="Texto del testimonio"></textarea>
+                    <input type="text" id="autor-testimonio" placeholder="Autor del testimonio">
+                    <button id="agregar-testimonio" class="btn-small"><i class="fas fa-plus"></i> Agregar</button>
+                </div>
+            </div>
+            
+            <div class="evidencia-visual" data-section="impacto">
+                <i class="fas fa-images"></i>
+                <p>Espacio para evidencias visuales del impacto de los proyectos implementados</p>
+                <input type="file" class="file-input" accept="image/*" multiple>
+            </div>
+        </section>
+        
+        <!-- Conclusiones -->
+        <section id="conclusiones" class="pagina">
+            <div class="seccion-header">
+                <div class="seccion-icono">
+                    <i class="fas fa-flag-checkered"></i>
+                </div>
+                <h2>Conclusiones</h2>
+            </div>
+            
+            <p>La implementación de talleres específicos para estudiantes, como el de competencias digitales para primer año y el de Excel para matemática financiera en cuarto año, ha demostrado ser una estrategia efectiva para fortalecer las habilidades tecnológicas de los estudiantes y vincular directamente las TIC con sus necesidades académicas.</p>
+            
+            <h3>Proyecciones Futuras</h3>
+            <ul id="proyecciones-list">
+                <li>Expandir los talleres de competencias digitales a todos los niveles</li>
+                <li>Desarrollar más talleres especializados vinculados a asignaturas específicas</li>
+                <li>Crear un programa de estudiantes monitores en TIC</li>
+                <li>Implementar un sistema de seguimiento del desarrollo de competencias digitales estudiantiles</li>
+            </ul>
+            
+            <div class="form-agregar-proyeccion">
+                <input type="text" id="nueva-proyeccion" placeholder="Agregar nueva proyección">
+                <button id="agregar-proyeccion" class="btn-small"><i class="fas fa-plus"></i></button>
+            </div>
+        </section>  
+        
+        <!-- Botones de acción -->
+        <div class="action-buttons">
+            <button class="btn" onclick="window.print()">
+                <i class="fas fa-print"></i> Imprimir o Exportar a PDF
+            </button>
+        </div>
+        
+        <!-- Footer clickeable -->
+        <footer id="footer-principal" onclick="mostrarPagina('portada')">
+            <p>Portafolio Digital de Evidencias - Dinamizador TIC</p>
+            <p>Liceo Prof. Germán Martínez Tavárez, Regional 15, Distrito 15-04 - Año Escolar 2025-2026</p>
+            <div class="tech-element">
+                <i class="fas fa-laptop-code"></i>
+                <i class="fas fa-network-wired"></i>
+                <i class="fas fa-tablet-alt"></i>
+                <i class="fas fa-server"></i>
+            </div>
+            <div class="footer-hint">
+                <i class="fas fa-home"></i> Haz clic aquí para volver a la Portada
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
